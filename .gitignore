@@ -1,0 +1,15 @@
+# Local DB
+chroma_db/
+
+# Python
+__pycache__/
+*.pyc
+
+# System
+.DS_Store
+
+# Test data
+*.pdf
+
+# Virtual environment
+venv/

@@ -1,0 +1,6 @@
+chromadb
+fpdf2
+pypdf
+pytest
+requests
+streamlit
