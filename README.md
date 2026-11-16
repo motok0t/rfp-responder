@@ -4,6 +4,8 @@ An AI-powered tool that helps B2B companies generate draft responses for Request
 
 Companies spend hundreds of hours answering repetitive questions in RFPs. This tool ingests past answered RFPs into a vector database and uses a local LLM to draft answers for new RFPs, significantly reducing response time.
 
+> **Note:** This is a functional MVP designed to demonstrate the core RAG architecture for RFP automation. For production use, enterprise-grade solutions like Loopio or Responsive offer advanced features, but this project shows how to build the underlying pipeline from scratch using local LLMs.
+
 ## Features
 
 - **Knowledge Base:** Upload past answered RFPs (PDFs) to build a local vector database (ChromaDB).
@@ -57,5 +59,24 @@ Companies spend hundreds of hours answering repetitive questions in RFPs. This t
 
 ## Demo
 
-> **Demo GIF is currently in progress.** 
-> In the meantime, you can run the app locally by following the instructions above.
+![Demo](demo.gif)
+
+*The GIF demonstrates indexing a past RFP and generating draft answers for a new one using local Ollama models.*
+
+### Example
+
+**Input (old_rfp.pdf - knowledge base):**
+- Q: How do you ensure data security? A: We use AES-256 encryption at rest and TLS 1.3 in transit.
+
+**Input (new_rfp.pdf - new question):**
+- Q: What security protocols do you use to protect client data?
+
+**Output (generated draft):**
+- We use AES-256 encryption at rest and TLS 1.3 in transit, with all employees undergoing annual security training.
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+*Developed by Elena Kurbatova*
